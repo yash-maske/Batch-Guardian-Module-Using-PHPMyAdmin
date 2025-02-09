@@ -1,0 +1,383 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.viit-logo {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 100px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1, header h2, header p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+header h1:first-child {
+    font-size: 1.5rem;
+}
+
+header h2 {
+    font-size: 1.3rem;
+    font-weight: normal;
+}
+
+header p {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.building-image {
+    display: block;
+    margin: 20px auto;
+    width: 600px;
+}
+
+form {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+form h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+    display: flex;
+    justify-content: center;
+}
+
+.form-group label {
+    width: 200px;
+    text-align: right;
+    margin-right: 10px;
+}
+
+.form-group input {
+    padding: 5px;
+    width: 250px;
+}
+
+/* Align the photo input at the bottom right */
+#photo-group {
+    text-align: right;
+    margin-top: 20px;
+}
+
+#photo-group label {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+#photo {
+    display: inline-block;
+}
+
+/* Styling the horizontal line */
+hr {
+    border: 1px solid #000;
+    margin: 40px 0;
+}
+
+/* Personal Information section */
+.personal-info {
+    text-align: center;
+}
+
+.personal-info h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.form-section {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.form-section .form-group {
+    width: 48%;
+}
+
+/* Address box styling */
+.address-box {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.address-box div {
+    width: 48%;
+}
+
+/* Parent Information */
+.parent-info-table {
+    margin-top: 30px;
+}
+
+.parent-info-table h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.section {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+label {
+    margin-right: 10px;
+}
+
+input[type="text"], input[type="email"], input[type="url"] {
+    padding: 5px;
+    margin-bottom: 10px;
+    width: 250px;
+}
+
+.right-label {
+    margin-left: 50px;
+}
+
+.emergency-section, .section {
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.emergency-section h2, .section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Emergency Section and Local Guardian alignment */
+.emergency-section .form-group, .section .form-group {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.emergency-section .form-group label, .section .form-group label {
+    width: 200px;
+    text-align: right;
+    margin-right: 10px;
+}
+
+.emergency-section .form-group input, .section .form-group input {
+    width: 250px;
+    padding: 5px;
+}
+
+/* Properly aligned sections for multiple fields */
+.form-section {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.form-section .form-group {
+    width: 48%;
+}
+
+/* Sibling to Contact Sections Styling */
+.sibling-section, .contact-section {
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9; /* Consistent background color */
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.sibling-section h2, .contact-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.sibling-section .form-group, .contact-section .form-group {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.sibling-section .form-group label, .contact-section .form-group label {
+    width: 200px;
+    text-align: right;
+    margin-right: 10px;
+}
+
+.sibling-section .form-group input, .contact-section .form-group input {
+    width: 250px;
+    padding: 5px;
+}
+
+/* Consistent layout for both sections */
+.sibling-section .form-section, .contact-section .form-section {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sibling-section .form-section .form-group, .contact-section .form-section .form-group {
+    width: 48%;
+}
+.main-heading {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+/* Sub-heading styling */
+.sub-heading {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+/* Table styling */
+.academic-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+/* Styling for the table headers */
+.academic-table th {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+/* Styling for the table rows and columns */
+.academic-table td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+/* Input field styling within table */
+.academic-table input[type="text"] {
+    width: 90%;
+    padding: 5px;
+    font-size: 1rem;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Submit button styling */
+
+
+
+
+
+/* Responsive styling for smaller screens */
+
+.swot-subheading {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 15px;
+    color: #555;
+}
+.report-heading {
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    text-decoration: underline;
+    color: #333;
+}
+
+/* Table styling */
+.performance-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.performance-table th,
+.performance-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+.performance-table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+.performance-table input[type="text"] {
+    width: 80%;
+    padding: 5px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-align: center;
+}
+.performance-table input[type="int"] {
+    width: 80%;
+    padding: 5px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-align: center;
+}
+.guidelines-list {
+    list-style-type: decimal;
+    padding-left: 20px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.guidelines-list li {
+    margin-bottom: 10px;
+}
+
+.signature {
+    text-align: right;
+    margin-top: 40px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.signature label {
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.signature input {
+    padding: 5px;
+    width: 250px; /* Adjust width as needed */
+}
+

@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Profile Sheet</title>
+    <style>
+        body {
+            background-color: #f5f5f5;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+
+        form {
+            background-color: #ffffff;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 900px;
+            margin: 50px auto;
+        }
+
+        h2, h3 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        .input-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            justify-content: space-between;
+        }
+
+        .input-container label {
+            width: 30%;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .input-container input[type="text"],
+        .input-container input[type="number"],
+        .input-container input[type="month"],
+        .input-container input[type="tel"],
+        .input-container textarea,
+        .input-container select {
+            border: 1px solid #3498db;
+            padding: 10px;
+            font-size: 16px;
+            width: 65%;
+            border-radius: 4px;
+        }
+
+        fieldset {
+            border: 2px solid #3498db;
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 20px;
+            box-sizing: border-box;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+        .button-container {
+    display: flex;
+    justify-content: center;
+}
+
+        #Department {
+            width: 80%; /* Increased size for the dropdown */
+            font-size: 16px;
+        }
+
+    </style>
+</head>
+<body>
+    <form id="student-profile-form" method="post" action="profilesheet.php">
+        <div class="upper1"><h3>Bansilal Ramnath Agrawal Charitable Trust</h3></div>
+        <div class="upper2"><h2>Vishwakarma Institute of Technology, Pune</h2></div>
+        <div class="depart">
+            <h2>Department of 
+                <select id="Department" name="Department" required>
+                    <option value="">Select Department</option>
+                    <option value="Computer Engineering">Computer Engineering</option>
+                    <option value="CSE-AI">CSE-AI</option>
+                    <option value="CSE-AIML">CSE-AIML</option>
+                    <option value="CSE-IOT">CSE-IOT</option>
+                    <option value="CSE-DS">CSE-DS</option>
+                    <option value="CSE-SE">CSE-SE</option>
+                    <option value="AI&DS">AI&DS</option>
+                    <option value="I.T. Engineering">I.T. Engineering</option>
+                    <option value="E&TC Engineering">E&TC Engineering</option>
+                    <option value="Mechanical Engineering">Mechanical Engineering</option>
+                    <option value="Civil Engineering">Civil Engineering</option>
+                </select>
+            </h2>
+        </div>
+
+        <div class="info">
+            <div class="input-container">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required placeholder="Enter your name">
+            </div>
+            <div class="input-container">
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" required>
+            </div>
+            <div class="input-container">
+                <label for="contact">Verified Contact No.:</label>
+                <input type="tel" id="contact" name="contact" required placeholder="Enter contact number">
+            </div>
+            <div class="input-container">
+                <label for="admission-year">Admission Year:</label>
+                <input type="number" id="admission-year" name="admission_year" required min="1900" max="2100" placeholder="YYYY">
+            </div>
+            <div class="input-container">
+                <label for="admitted-to">Admitted to:</label>
+                <select id="admitted-to" name="admitted_to">
+                    <option value="FE">FE</option>
+                    <option value="SE">SE</option>
+                </select>
+            </div>
+            <div class="input-container">
+                <label for="roll-no-div">Roll No. & Div.:</label>
+                <input type="text" id="roll-no-div" name="roll_no_div" placeholder="SE/TE/BE">
+            </div>
+            <div class="input-container">
+                <label for="prn">PRN:</label>
+                <input type="text" id="prn" name="prn">
+            </div>
+        </div>
+
+        <fieldset>
+            <legend>Parent/Guardian Information</legend>
+            <div class="input-container">
+                <label for="parents-in-pune">Parents Residing in Pune:</label>
+                <select id="parents-in-pune" name="parents_in_pune">
+                    <option value="yes">YES</option>
+                    <option value="no">NO</option>
+                </select>
+            </div>
+            <div class="input-container">
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address" required placeholder="Enter address">
+            </div>
+            <div class="input-container">
+                <label for="local-guardian">Local Guardian (if any):</label>
+                <input type="text" id="local-guardian" name="local_guardian" placeholder="Name, Address & Contact No.">
+            </div>
+            <div class="input-container">
+                <label for="mother-name">Mother's Name:</label>
+                <input type="text" id="mother-name" name="mother_name" required placeholder="Mother's name">
+            </div>
+            <div class="input-container">
+                <label for="mother-occupation">Mother's Occupation:</label>
+                <input type="text" id="mother-occupation" name="mother_occupation">
+            </div>
+            <div class="input-container">
+                <label for="mother-contact">Mother's Verified Contact No./Email:</label>
+                <input type="text" id="mother-contact" name="mother_contact" placeholder="Contact No./Email">
+            </div>
+            <div class="input-container">
+                <label for="mother-education">Mother's Education:</label>
+                <input type="text" id="mother-education" name="mother_education">
+            </div>
+            <div class="input-container">
+                <label for="father-name">Father's Name:</label>
+                <input type="text" id="father-name" name="father_name" required placeholder="Father's name">
+            </div>
+            <div class="input-container">
+                <label for="father-occupation">Father's Occupation:</label>
+                <input type="text" id="father-occupation" name="father_occupation">
+            </div>
+            <div class="input-container">
+                <label for="father-contact">Father's Verified Contact No./Email:</label>
+                <input type="text" id="father-contact" name="father_contact" placeholder="Contact No./Email">
+            </div>
+            <div class="input-container">
+                <label for="father-education">Father's Education:</label>
+                <input type="text" id="father-education" name="father_education">
+            </div>
+            <div class="input-container">
+                <label for="siblings">No. of Siblings:</label>
+                <input type="number" id="siblings" name="siblings">
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Academic Record</legend>
+            
+                <table border="1" cellpadding="10" cellspacing="0" style="width: 100%; border-collapse: collapse;">
+                    <thead>
+                        <tr>
+                            <th>Admitted To</th>
+                            <th>Result</th>
+                            <th>Cleared in Month & Year</th>
+                            <th>Subjects Failed (if any)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>10th Std</td>
+                            <td><input type="text" name="10th_result" required></td>
+                            <td><input type="month" name="10th_cleared" required></td>
+                            <td><input type="text" name="10th_failed"></td>
+                        </tr>
+                        <tr>
+                            <td>12th Std</td>
+                            <td><input type="text" name="12th_result" required></td>
+                            <td><input type="month" name="12th_cleared" required></td>
+                            <td><input type="text" name="12th_failed"></td>
+                        </tr>
+                        <tr>
+                            <td>FE I Sem</td>
+                            <td><input type="text" name="fe1_result"></td>
+                            <td><input type="month" name="fe1_cleared"></td>
+                            <td><input type="text" name="fe1_failed"></td>
+                        </tr>
+                        <tr>
+                            <td>FE II Sem</td>
+                            <td><input type="text" name="fe2_result"></td>
+                            <td><input type="month" name="fe2_cleared"></td>
+                            <td><input type="text" name="fe2_failed"></td>
+                        </tr>
+                        <tr>
+                            <td>SE I Sem</td>
+                            <td><input type="text" name="se1_result"></td>
+                            <td><input type="month" name="se1_cleared"></td>
+                            <td><input type="text" name="se1_failed"></td>
+                        </tr>
+                        <tr>
+                            <td>SE II Sem</td>
+                            <td><input type="text" name="se2_result"></td>
+                            <td><input type="month" name="se2_cleared"></td>
+                            <td><input type="text" name="se2_failed"></td>
+                        </tr>
+                        <tr>
+                            <td>TE I Sem</td>
+                            <td><input type="text" name="te1_result"></td>
+                            <td><input type="month" name="te1_cleared"></td>
+                            <td><input type="text" name="te1_failed"></td>
+                        </tr>
+                        <tr>
+                            <td>TE II Sem</td>
+                            <td><input type="text" name="te2_result"></td>
+                            <td><input type="month" name="te2_cleared"></td>
+                            <td><input type="text" name="te2_failed"></td>
+                        </tr>
+                        <tr>
+                            <td>BE I Sem</td>
+                            <td><input type="text" name="be1_result"></td>
+                            <td><input type="month" name="be1_cleared"></td>
+                            <td><input type="text" name="be1_failed"></td>
+                        </tr>
+                        <tr>
+                            <td>BE II Sem</td>
+                            <td><input type="text" name="be2_result"></td>
+                            <td><input type="month" name="be2_cleared"></td>
+                            <td><input type="text" name="be2_failed"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            
+            
+        </fieldset>
+        
+        <div class="button-container">
+            <button type="submit">Submit Form</button>
+        </div>
+      
+    </form>
+    
+      
+      
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script>
+        document.getElementById('download-pdf').addEventListener('click', function() {
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF();
+
+            // Capture the form content as HTML
+            doc.html(document.getElementById('student-profile-form'), {
+                callback: function (doc) {
+                    doc.save('form_submission.pdf');
+                },
+                x: 10,
+                y: 10
+            });
+        });
+    </script>
+</body>
+</html>

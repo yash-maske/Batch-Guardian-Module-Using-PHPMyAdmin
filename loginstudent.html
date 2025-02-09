@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Student</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .login-container {
+            background-color: #cdc0c0;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+            width: 250px;
+            text-align: center;
+            animation: slide-up 0.5s ease-out forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        .login-container h2 {
+            margin-bottom: 20px;
+        }
+        .login-container input[type="text"],
+        .login-container input[type="password"] {
+            width: calc(100% - 22px); /* Adjusted for padding and border */
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            transition: border-color 0.3s;
+        }
+        .login-container input[type="text"]:focus,
+        .login-container input[type="password"]:focus {
+            border-color: #4CAF50;
+        }
+        .login-container input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: 100%; /* Full width */
+        }
+        .login-container input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        .login-container p {
+            margin-top: 15px;
+        }
+        @keyframes slide-up {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        footer {
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            padding: 10px;
+            background-color: #f4f4f4;
+            text-align: center; /* Center align text and links */
+        }
+        a.help-link {
+            display: inline-block;
+            padding: 10px;
+            background-color: #acb0b5;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        a.help-link:hover {
+            background-color: #5f6b86;
+        }
+        .image {
+            max-width: 60%; /* Adjusted for better visibility */
+            height: auto;
+            margin-bottom: 20px; /* Reduced space for better alignment */
+        }
+    </style>
+</head>
+<body>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4xRcgWl7b5R1AijA6LJUyujwP9ve1qP11Qw&s" alt="EduPlusCampus" class="image">
+    <div class="login-container">
+        <h2>Log In</h2>
+        <form action="loginstudent.php" method="post">
+            <input type="text" name="user_name" placeholder="Username" required><br>
+            <input type="password" name="pass_word" placeholder="Password" required><br>
+            <input type="submit" value="Log In">
+        </form>
+        <p>Forgot Password? <a href="http://localhost/DBMS/DEMO/forgotpassword.php">Get Password</a></p>
+    </div>
+    <footer>
+        <a href="https://chat.whatsapp.com/Fyum6K7Cy1SE0AX9wj2eNF" class="help-link">Help?</a>
+    </footer>
+</body>
+</html>

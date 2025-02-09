@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Information and Hackathon Participation Form</title>
+    <style>
+        body {
+            background-color: #f5f5f5; /* Light grey background */
+            font-family: Arial, sans-serif;
+            color: #333; /* Dark text color for readability */
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            background-color: #a3a7b3; /* Vishwakarma theme color */
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 0;
+        }
+
+        .header img {
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        form {
+            background-color: #ffffff; /* White background for form */
+            border: 2px solid #ccc; /* Light grey border */
+            border-radius: 8px; /* Rounded corners */
+            padding: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+            max-width: 1000px; /* Wider form for larger desktop screens */
+            margin: 50px auto; /* Center the form with top and bottom margin */
+        }
+
+        h2, h3 {
+            color: #2c3e50; /* Deep navy color for headings */
+            margin-bottom: 20px;
+            text-align: center; /* Center align headings for better desktop view */
+        }
+
+        .input-row {
+            display: flex;
+            flex-wrap: wrap; /* Allows input rows to wrap on smaller screens */
+            margin-bottom: 20px;
+        }
+
+        .input-container {
+            flex: 1;
+            min-width: 250px; /* Minimum width for each input container */
+            margin-right: 20px; /* Space between columns */
+        }
+
+        .input-container:last-child {
+            margin-right: 0;
+        }
+
+        .input-container label {
+            display: block;
+            font-weight: bold;
+            font-size: 16px;
+            margin-bottom: 5px; /* Space between label and input */
+        }
+
+        .input-container input[type="text"],
+        .input-container input[type="number"],
+        .input-container input[type="date"],
+        .input-container select {
+            border: 1px solid #ccc;
+            padding: 10px; /* Increased padding for better desktop appearance */
+            font-size: 16px;
+            width: 100%; /* Full width of container */
+            border-radius: 4px; /* Rounded corners */
+        }
+
+        .input-container select {
+            padding-right: 10px;
+        }
+
+        fieldset {
+            border: 2px solid #3498db; /* Light blue border */
+            border-radius: 8px;
+            padding: 20px; /* Increased padding for better spacing */
+            margin-top: 20px;
+            box-sizing: border-box;
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background: #ccc; /* Light grey horizontal line */
+            margin: 20px 0;
+        }
+
+        .submit {
+            text-align: center; /* Center the submit button */
+        }
+
+        .submit input[type="submit"] {
+            background-color: #3498db; /* Blue background for submit button */
+            color: white; /* White text color */
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .submit input[type="submit"]:hover {
+            background-color: #2980b9; /* Darker blue on hover */
+        }
+
+        /* Achievements Section */
+        .achievements {
+            margin-top: 20px;
+        }
+
+        .achievements .input-row {
+            display: flex;
+            align-items: center; /* Center-align items vertically */
+        }
+
+        .achievements .input-container {
+            flex: 1;
+            margin-right: 10px; /* Space between label and input */
+        }
+
+        .achievements .input-container input[type="text"] {
+            width: calc(100% - 200px); /* Adjust width to make space for label */
+        }
+
+        .achievements .input-container label {
+            font-weight: bold;
+            font-size: 16px;
+            margin-bottom: 0; /* No bottom margin for labels */
+            display: inline-block;
+            width: 180px; /* Fixed width for labels */
+        }
+
+        .input-container {
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header with Logo and Title -->
+    <div class="header">
+        <img src="https://www.viit.ac.in/images/logo.png" alt="VIIT Logo">
+        <h1>Vishwakarma Institute of Information Technology</h1>
+    </div>
+
+    <!-- Student Information Form -->
+    <form action="">
+        <div class="depart">
+            <h2>Student Information Form</h2>
+        </div>
+        
+        <hr>
+
+        <div class="info">
+            <div class="input-row">
+                <div class="input-container">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" required placeholder="Enter your name">
+                </div>
+                <div class="input-container">
+                    <label for="fatherName">Father's Name</label>
+                    <input type="text" id="fatherName" name="fatherName" required placeholder="Enter your father's name">
+                </div>
+                <div class="input-container">
+                    <label for="motherName">Mother's Name</label>
+                    <input type="text" id="motherName" name="motherName" required placeholder="Enter your mother's name">
+                </div>
+            </div>
+
+            <div class="input-row">
+                <div class="input-container">
+                    <label for="bloodGroup">Blood Group</label>
+                    <input type="text" id="bloodGroup" name="bloodGroup" required placeholder="Enter your blood group">
+                </div>
+                <div class="input-container">
+                    <label for="age">Age</label>
+                    <input type="number" id="age" name="age" required min="0" placeholder="Enter your age">
+                </div>
+                <div class="input-container">
+                    <label for="dob">Date of Birth</label>
+                    <input type="date" id="dob" name="dob" required>
+                </div>
+            </div>
+
+            <div class="input-row">
+                <div class="input-container">
+                    <label for="marks10">10th Percentage</label>
+                    <input type="number" id="marks10" name="marks10" required placeholder="Enter 10th Percentage">
+                </div>
+                <div class="input-container">
+                    <label for="marks12">12th Percentage</label>
+                    <input type="number" id="marks12" name="marks12" required placeholder="Enter 12th Percentage">
+                </div>
+                <div class="input-container">
+                    <label for="cgpa1">Sem 1 CGPA</label>
+                    <input type="number" step="0.01" id="cgpa1" name="cgpa1" required placeholder="Enter Sem 1 CGPA">
+                </div>
+            </div>
+
+            <div class="input-row">
+                <div class="input-container">
+                    <label for="cgpa2">Sem 2 CGPA</label>
+                    <input type="number" step="0.01" id="cgpa2" name="cgpa2" required placeholder="Enter Sem 2 CGPA">
+                </div>
+                <div class="input-container">
+                    <label for="cgpa3">Sem 3 CGPA</label>
+                    <input type="number" step="0.01" id="cgpa3" name="cgpa3" required placeholder="Enter Sem 3 CGPA">
+                </div>
+                <div class="input-container">
+                    <label for="cgpa4">Sem 4 CGPA</label>
+                    <input type="number" step="0.01" id="cgpa4" name="cgpa4" required placeholder="Enter Sem 4 CGPA">
+                </div>
+            </div>
+
+            <div class="input-row">
+                <div class="input-container">
+                    <label for="cgpa5">Sem 5 CGPA</label>
+                    <input type="number" step="0.01" id="cgpa5" name="cgpa5" required placeholder="Enter Sem 5 CGPA">
+                </div>
+                <div class="input-container">
+                    <label for="cgpa6">Sem 6 CGPA</label>
+                    <input type="number" step="0.01" id="cgpa6" name="cgpa6" required placeholder="Enter Sem 6 CGPA">
+                </div>
+                <div class="input-container">
+                    <label for="cgpa7">Sem 7 CGPA</label>
+                    <input type="number" step="0.01" id="cgpa7" name="cgpa7" required placeholder="Enter Sem 7 CGPA">
+                </div>
+            </div>
+
+            <div class="input-row">
+                <div class="input-container">
+                    <label for="cgpa8">Sem 8 CGPA</label>
+                    <input type="number" step="0.01" id="cgpa8" name="cgpa8" required placeholder="Enter Sem 8 CGPA">
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- <div class="submit">
+            <input type="submit" value="Submit">
+        </div>
+     -->
+
+    <!-- Hackathon Participation Form -->
+    
+        <h2>Event Participation</h2>
+        
+        <hr>
+
+        <!-- Name of Hackathon -->
+        <div class="input-row">
+            <div class="input-container">
+                <label for="hackathonName">Name of Hackathon *</label>
+                <input type="text" id="hackathonName" name="hackathonName" required placeholder="Enter name of hackathon">
+            </div>
+        </div>
+
+        <!-- Organization name of Institute, City -->
+        <div class="input-row">
+            <div class="input-container">
+                <label for="institute">Organization name of Institute, City *</label>
+                <input type="text" id="institute" name="institute" required placeholder="Enter institute name and city">
+            </div>
+        </div>
+
+        <!-- Type of Event -->
+        <div class="input-row">
+            <div class="input-container">
+                <label for="eventType">Please Choose *</label>
+                <select id="eventType" name="eventType" required>
+                    <option value="" disabled selected>Please Select</option>
+                    <option value="inter-college">Inter College</option>
+                    <option value="intra-college">Intra College</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Team Name -->
+        <div class="input-row">
+            <div class="input-container">
+                <label for="teamName">Team Name *</label>
+                <input type="text" id="teamName" name="teamName" required placeholder="Enter team name">
+            </div>
+        </div>
+
+        <!-- Team Leader Name -->
+        <div class="input-row">
+            <div class="input-container">
+                <label for="teamLeader">Name of Team Leader *</label>
+                <input type="text" id="teamLeader" name="teamLeader" required placeholder="Enter team leader's name">
+            </div>
+        </div>
+
+        <!-- Team Members -->
+        <div class="input-row">
+            <div class="input-container">
+                <label for="teamMembers">Team Member Names *</label>
+                <input type="text" id="teamMembers" name="teamMembers" required placeholder="Enter team members' names">
+            </div>
+        </div>
+
+        <!-- Team Size -->
+        <div class="input-row">
+            <div class="input-container">
+                <label for="teamSize">Team Size *</label>
+                <input type="number" id="teamSize" name="teamSize" required placeholder="Enter team size">
+            </div>
+        </div>
+
+        <!-- Problem Statement -->
+        <div class="input-row">
+            <div class="input-container">
+                <label for="problemStatement">Problem Statement *</label>
+                <input type="text" id="problemStatement" name="problemStatement" required placeholder="Enter problem statement">
+            </div>
+        </div>
+
+        <!-- Event Outcome -->
+        <div class="input-row">
+            <div class="input-container">
+                <label for="eventOutcome">Event Participated/ Winner/Runner Up *</label>
+                <select id="eventOutcome" name="eventOutcome" required>
+                    <option value="" disabled selected>Please Select</option>
+                    <option value="participated">Participated</option>
+                    <option value="winner">Winner</option>
+                    <option value="runner-up">Runner Up</option>
+                </select>
+            </div>
+        </div>
+
+        <hr>
+        <div class="submit">
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+</body>
+</html>

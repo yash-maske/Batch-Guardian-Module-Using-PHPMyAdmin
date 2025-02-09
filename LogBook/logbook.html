@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Log Book</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <img src="http://localhost/DBMS/DEMO/LogBookDivya/ViitLogo.png" alt="VIIT Logo" class="viit-logo">
+        <header>
+            <h1>Bansilal Ramnath Agarwal Charitable Trust's</h1>
+            <h2>Vishwakarma Institute Of Information Technology</h2>
+            <h1>(An Autonomous College Affiliated to SavitriBai Phule Pune University)</h1>
+            <p>Department Of Computer Engineering</p>
+        </header>
+        <img src="http://localhost/DBMS/DEMO/LogBookDivya/Abuilding.jpeg.jpg" alt="A Building" class="building-image">
+        <form>
+            <h2>Batch Guardian Record Book</h2>
+            <div class="form-group">
+                <label for="studentName">Name of The Student:</label>
+                <input type="text" id="studentName" name="studentName">
+            </div>
+            <div class="form-group">
+                <label for="grNo">GR No:</label>
+                <input type="text" id="grNo" name="grNo">
+            </div>
+            <div class="form-group">
+                <label for="batchGuardian">Name of The Batch Guardian:</label>
+                <input type="text" id="batchGuardian" name="batchGuardian">
+            </div>
+            <div id="photo-group">
+                <label for="photo">Photo:</label>
+                <input type="file" id="photo" name="photo">
+            </div>
+        </form>
+
+        <hr>
+
+        <!-- Personal Information Section -->
+        <div class="personal-info">
+            <h2>Personal Information</h2>
+            <div class="form-group">
+                <label for="admissionDate">Date of Admission:</label>
+                <input type="date" id="admissionDate" name="admissionDate">
+            </div>
+            
+            <div class="form-group">
+                <label for="quota">Admission Quota:</label>
+                <select id="quota" name="quota">
+                    <option value="SC">SC</option>
+                    <option value="ST">ST</option>
+                    <option value="NT">NT</option>
+                    <option value="VJ">VJ</option>
+                    <option value="OBC">OBC</option>
+                    <option value="OPEN">OPEN</option>
+                    <option value="OTHER">ANY OTHER (Specify)</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="admissionType">Admission Through:</label>
+                <input type="text" id="admissionType" name="admissionType" placeholder="CET/JEE/Any Other">
+            </div>
+
+            <div class="form-section">
+                <div class="form-group">
+                    <label for="dob">Date of Birth:</label>
+                    <input type="date" id="dob" name="dob">
+                </div>
+                <div class="form-group">
+                    <label for="bloodGroup">Blood Group:</label>
+                    <input type="text" id="bloodGroup" name="bloodGroup">
+                </div>
+            </div>
+
+            <div class="form-section">
+                <div class="form-group">
+                    <label for="mobileNo">Mobile No:</label>
+                    <input type="text" id="mobileNo" name="mobileNo">
+                </div>
+                <div class="form-group">
+                    <label for="residenceNo">Residence No:</label>
+                    <input type="text" id="residenceNo" name="residenceNo">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="officialMail">Official Mail ID:</label>
+                <input type="email" id="officialMail" name="officialMail">
+            </div>
+
+            <div class="form-group">
+                <label for="personalMail">Personal Mail ID:</label>
+                <input type="email" id="personalMail" name="personalMail">
+            </div>
+
+            <div class="form-group">
+                <label for="linkedinProfile">LinkedIn Profile:</label>
+                <input type="url" id="linkedinProfile" name="linkedinProfile">
+            </div>
+
+            <!-- Address Box -->
+            <div class="address-box">
+                <div>
+                    <label for="permanentAddress">Permanent Address:</label>
+                    <textarea id="permanentAddress" rows="4" style="width: 100%;"></textarea>
+                </div>
+                <div>
+                    <label for="localAddress">Local Address:</label>
+                    <textarea id="localAddress" rows="4" style="width: 100%;"></textarea>
+                </div>
+            </div>
+
+            <!-- Parent Information Table -->
+            <div class="parent-info-table">
+                
+                <div class="form-group">
+                    <label for="fatherName">Name of Father:</label>
+                    <input type="text" id="fatherName" name="fatherName">
+                </div>
+                <div class="form-section">
+                    <div class="form-group">
+                        <label for="fatherQualification">Qualification:</label>
+                        <input type="text" id="fatherQualification" name="fatherQualification">
+                    </div>
+                    <div class="form-group">
+                        <label for="fatherDesignation">Designation:</label>
+                        <input type="text" id="fatherDesignation" name="fatherDesignation">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="fatherOccupation">Occupation:</label>
+                    <input type="text" id="fatherOccupation" name="fatherOccupation">
+                </div>
+                <div class="form-group">
+                    <label for="fatherOrganisation">Organisation:</label>
+                    <input type="text" id="fatherOrganisation" name="fatherOrganisation">
+                </div>
+                <div class="form-section">
+                    <div class="form-group">
+                        <label for="fatherEmail">Email ID:</label>
+                        <input type="email" id="fatherEmail" name="fatherEmail">
+                    </div>
+                    <div class="form-group">
+                        <label for="fatherMobile">Mobile No:</label>
+                        <input type="text" id="fatherMobile" name="fatherMobile">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="motherName">Name of Mother:</label>
+                    <input type="text" id="motherName" name="motherName">
+                </div>
+                <div class="form-section">
+                    <div class="form-group">
+                        <label for="motherQualification">Qualification:</label>
+                        <input type="text" id="motherQualification" name="motherQualification">
+                    </div>
+                    <div class="form-group">
+                        <label for="motherDesignation">Designation:</label>
+                        <input type="text" id="motherDesignation" name="motherDesignation">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="motherOccupation">Occupation:</label>
+                    <input type="text" id="motherOccupation" name="motherOccupation">
+                </div>
+                <div class="form-group">
+                    <label for="motherOrganisation">Organisation:</label>
+                    <input type="text" id="motherOrganisation" name="motherOrganisation">
+                </div>
+                <div class="form-section">
+                    <div class="form-group">
+                        <label for="motherEmail">Email ID:</label>
+                        <input type="email" id="motherEmail" name="motherEmail">
+                    </div>
+                    <div class="form-group">
+                        <label for="motherMobile">Mobile No:</label>
+                        <input type="text" id="motherMobile" name="motherMobile">
+                    </div>
+                </div>
+            
+    <div class="section">
+       
+        <label for="sibling1_name">Name of Sibling1:</label>
+        <input type="text" id="sibling1_name" name="sibling1_name"><br><br>
+
+        <label for="qualification">Qualification:</label>
+        <input type="text" id="qualification" name="qualification">
+        <label for="occupation" class="right-label">Occupation:</label>
+        <input type="text" id="occupation" name="occupation"><br><br>
+
+        <label for="organisation">Organisation:</label>
+        <input type="text" id="organisation" name="organisation">
+        <label for="designation" class="right-label">Designation:</label>
+        <input type="text" id="designation" name="designation"><br><br>
+
+        <label for="email">Email ID:</label>
+        <input type="email" id="email" name="email">
+        <label for="mobile" class="right-label">Mobile No:</label>
+        <input type="text" id="mobile" name="mobile"><br><br>
+    </div>
+
+    <!-- Sibling 2 Section -->
+    <div class="section">
+        
+        <label for="sibling2_name">Name of Sibling2:</label>
+        <input type="text" id="sibling2_name" name="sibling2_name"><br><br>
+
+        <label for="qualification2">Qualification:</label>
+        <input type="text" id="qualification2" name="qualification2">
+        <label for="occupation2" class="right-label">Occupation:</label>
+        <input type="text" id="occupation2" name="occupation2"><br><br>
+
+        <label for="organisation2">Organisation:</label>
+        <input type="text" id="organisation2" name="organisation2">
+        <label for="designation2" class="right-label">Designation:</label>
+        <input type="text" id="designation2" name="designation2"><br><br>
+
+        <label for="email2">Email ID:</label>
+        <input type="email" id="email2" name="email2">
+        <label for="mobile2" class="right-label">Mobile No:</label>
+        <input type="text" id="mobile2" name="mobile2"><br><br>
+    </div>
+
+    <!-- Local Guardian Section -->
+    <div class="section">
+        
+        <label for="guardian_name">Name of Local Guardian(if any):</label>
+        <input type="text" id="guardian_name" name="guardian_name"><br><br>
+        <label for="qualification2">Qualification:</label>
+        <input type="text" id="qualification2" name="qualification2">
+        <label for="occupation2" class="right-label">Occupation:</label>
+        <input type="text" id="occupation2" name="occupation2"><br><br>
+
+        <label for="organisation2">Organisation:</label>
+        <input type="text" id="organisation2" name="organisation2">
+        <label for="designation2" class="right-label">Designation:</label>
+        <input type="text" id="designation2" name="designation2"><br><br>
+
+        <label for="email2">Email ID:</label>
+        <input type="email" id="email2" name="email2">
+        <label for="mobile2" class="right-label">Mobile No:</label>
+        <input type="text" id="mobile2" name="mobile2"><br><br>
+
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address"><br><br>
+    </div>
+
+    <!-- Emergency Contact Section -->
+    <div class="emergency-section">
+        <h2>Contact In Case of Emergency</h2>
+        <label for="emergency_name">Name:</label>
+        <input type="text" id="emergency_name" name="emergency_name"><br><br>
+
+        <label for="emergency_address">Address:</label>
+        <input type="text" id="emergency_address" name="emergency_address"><br><br>
+
+        <label for="emergency_mobile1">Mobile No 1:</label>
+        <input type="text" id="emergency_mobile1" name="emergency_mobile1">
+        <label for="emergency_mobile2" class="right-label">Mobile No 2:</label>
+        <input type="text" id="emergency_mobile2" name="emergency_mobile2"><br><br>
+    </div>
+    
+    <hr>
+    <div class="container"></div>
+        <!-- Heading Section -->
+        <h1 class="main-heading">General Information</h1>
+        
+        <!-- Sub-heading for Previous Academic Record -->
+        <h2 class="sub-heading">Previous Academic Record</h2>
+
+        <!-- Table for Academic Record with Input Fields -->
+        <form>
+            <table class="academic-table">
+                <thead>
+                    <tr>
+                        <th>Class</th>
+                        <th>Board</th>
+                        <th>Percentage</th>
+                        <th>Year of Passing</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>S.S.C</td>
+                        <td><input type="text" name="ssc-board" placeholder="Enter Board" required></td>
+                        <td><input type="text" name="ssc-percentage" placeholder="Enter Percentage" required></td>
+                        <td><input type="text" name="ssc-year" placeholder="Enter Year of Passing" required></td>
+                    </tr>
+                    <tr>
+                        <td>H.S.C</td>
+                        <td><input type="text" name="hsc-board" placeholder="Enter Board" required></td>
+                        <td><input type="text" name="hsc-percentage" placeholder="Enter Percentage" required></td>
+                        <td><input type="text" name="hsc-year" placeholder="Enter Year of Passing" required></td>
+                    </tr>
+                    <tr>
+                        <td>Diploma</td>
+                        <td><input type="text" name="diploma-board" placeholder="Enter Board"></td>
+                        <td><input type="text" name="diploma-percentage" placeholder="Enter Percentage"></td>
+                        <td><input type="text" name="diploma-year" placeholder="Enter Year of Passing"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <h2 class="sub-heading">Performance in Competitive Examination</h2>
+
+        <!-- Table for Academic Record with Input Fields -->
+        <form>
+            <table class="academic-table">
+                <thead>
+                    <tr>
+                        <th>Name of Exam</th>
+                        <th>Organised by</th>
+                        <th>Grade/Marks</th>
+                        <th>Year of Exam</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>CET</td>
+                        <td><input type="text" name="organisor"  required></td>
+                        <td><input type="text" name="grade"  required></td>
+                        <td><input type="text" name="exam-year"  required></td>
+                    </tr>
+                    <tr>
+                        <td>JEE MAINS</td>
+                        <td><input type="text" name="organisor"required></td>
+                        <td><input type="text" name="grade" required></td>
+                        <td><input type="text" name="exam-year"  required></td>
+                    </tr>
+                    <tr>
+                        <td>JEE ADVANCE</td>
+                        <td><input type="text" name="rganisor"></td>
+                        <td><input type="text" name="grade" ></td>
+                        <td><input type="text" name="exam-year" ></td>
+                    </tr>
+                </tbody>
+            </table>
+           
+            <h2 class="sub-heading">Any Other Exam</h2>
+
+        <!-- Table for Academic Record with Input Fields -->
+        <form>
+            <table class="academic-table">
+                <thead>
+                   
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td><input type="text" name="1"  ></td>
+                        <td><input type="text" name="2" ></td>
+                        <td><input type="text" name="3" ></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td><input type="text" name="1"  ></td>
+                        <td><input type="text" name="2" ></td>
+                        <td><input type="text" name="3" ></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td><input type="text" name="1" ></td>
+                        <td><input type="text" name="2" ></td>
+                        <td><input type="text" name="3" ></td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+            
+        </form>
+    </div>
+    <div class="container"></div>
+        <!-- Hobbies Section -->
+        <h2 class="section-heading">Hobbies</h2>
+        <div class="form-group">
+            <input type="text" name="hobbies" placeholder="Enter your hobbies" required>
+        </div>
+
+        <!-- Area of Interest Section -->
+        <h2 class="section-heading">Area of Interest</h2>
+        <div class="form-group">
+            <input type="text" name="area-of-interest" placeholder="Enter your area of interest" required>
+        </div>
+
+        <!-- Special Achievements/Skills Section -->
+        <h2 class="section-heading">Special Achievements/Skills</h2>
+        <div class="form-group">
+            <label>1. </label>
+            <input type="text" name="achievement1" placeholder="Enter achievement or skill" required>
+        </div>
+        <div class="form-group">
+            <label>2. </label>
+            <input type="text" name="achievement2" placeholder="Enter achievement or skill" required>
+        </div>
+        <div class="form-group">
+            <label>3. </label>
+            <input type="text" name="achievement3" placeholder="Enter achievement or skill">
+        </div>
+        <div class="form-group">
+            <label>4. </label>
+            <input type="text" name="achievement4" placeholder="Enter achievement or skill">
+        </div>
+
+        <!-- SWOT Analysis Section -->
+        <h2 class="section-heading">SWOT Analysis</h2>
+
+        <!-- Strength -->
+        <h3 class="swot-subheading">Strength</h3>
+        <div class="form-group">
+            <input type="text" name="strength" placeholder="Enter your strength" required>
+        </div>
+
+        <!-- Weakness -->
+        <h3 class="swot-subheading">Weakness</h3>
+        <div class="form-group">
+            <input type="text" name="weakness" placeholder="Enter your weakness" required>
+        </div>
+
+        <!-- Opportunities -->
+        <h3 class="swot-subheading">Opportunities</h3>
+        <div class="form-group">
+            <input type="text" name="opportunities" placeholder="Enter opportunities" required>
+        </div>
+
+        <!-- Threats -->
+        <h3 class="swot-subheading">Threats</h3>
+        <div class="form-group">
+            <input type="text" name="threats" placeholder="Enter threats" required>
+        </div>
+        <hr>
+        <div class="container">
+            <!-- Heading -->
+            <h2 class="report-heading">Consolidated Graduation Performance Report</h2>
+    
+            <!-- Table for Performance Report -->
+            <table class="performance-table">
+                <thead>
+                    <tr>
+                        <th>Year</th>
+                        <th>Semester</th>
+                        <th>Total Marks Scored</th>
+                        <th>% with Grade</th>
+                        <th>Avg %</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td rowspan="2">FY</td>
+                        <td>Sem I</td>
+                        <td><input type="text" name="fy-sem1-total-marks" placeholder="Enter marks"></td>
+                        <td><input type="text" name="fy-sem1-percent-grade" placeholder="% & Grade"></td>
+                        <td rowspan="2"><input type="text" name="fy-avg-percent" placeholder="Avg %"></td>
+                    </tr>
+                    <tr>
+                        <td>Sem II</td>
+                        <td><input type="text" name="fy-sem2-total-marks" placeholder="Enter marks"></td>
+                        <td><input type="text" name="fy-sem2-percent-grade" placeholder="% & Grade"></td>
+                    </tr>
+    
+                    <tr>
+                        <td rowspan="2">SY</td>
+                        <td>Sem I</td>
+                        <td><input type="text" name="sy-sem1-total-marks" placeholder="Enter marks"></td>
+                        <td><input type="text" name="sy-sem1-percent-grade" placeholder="% & Grade"></td>
+                        <td rowspan="2"><input type="text" name="sy-avg-percent" placeholder="Avg %"></td>
+                    </tr>
+                    <tr>
+                        <td>Sem II</td>
+                        <td><input type="text" name="sy-sem2-total-marks" placeholder="Enter marks"></td>
+                        <td><input type="text" name="sy-sem2-percent-grade" placeholder="% & Grade"></td>
+                    </tr>
+    
+                    <tr>
+                        <td rowspan="2">TY</td>
+                        <td>Sem I</td>
+                        <td><input type="text" name="ty-sem1-total-marks" placeholder="Enter marks"></td>
+                        <td><input type="text" name="ty-sem1-percent-grade" placeholder="% & Grade"></td>
+                        <td rowspan="2"><input type="text" name="ty-avg-percent" placeholder="Avg %"></td>
+                    </tr>
+                    <tr>
+                        <td>Sem II</td>
+                        <td><input type="text" name="ty-sem2-total-marks" placeholder="Enter marks"></td>
+                        <td><input type="text" name="ty-sem2-percent-grade" placeholder="% & Grade"></td>
+                    </tr>
+    
+                    <tr>
+                        <td rowspan="2">BTech</td>
+                        <td>Sem I</td>
+                        <td><input type="text" name="btech-sem1-total-marks" placeholder="Enter marks"></td>
+                        <td><input type="text" name="btech-sem1-percent-grade" placeholder="% & Grade"></td>
+                        <td rowspan="2"><input type="text" name="btech-avg-percent" placeholder="Avg %"></td>
+                    </tr>
+                    <tr>
+                        <td>Sem II</td>
+                        <td><input type="text" name="btech-sem2-total-marks" placeholder="Enter marks"></td>
+                        <td><input type="text" name="btech-sem2-percent-grade" placeholder="% & Grade"></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2 class="report-heading">Placement Drive Appeared for</h2>
+            <table class="performance-table">
+              
+                <thead>
+                        
+                            <th>SR NO</th>
+                            <th>Name of Comapny</th>
+                            <th>Dtae of drive</th>
+                            <th>No of levels cleared</th>
+                            <th>Result with Package</th>
+                        
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td><input type="text" name="comapany"  ></td>
+                        <td><input type="date" name="date_drive" ></td>
+                        <td><input type="int" name="levels" ></td>
+                        <td><input type="int" name="Package" ></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td><input type="text" name="comapany"  ></td>
+                        <td><input type="date" name="date_drive" ></td>
+                        <td><input type="int" name="levels" ></td>
+                        <td><input type="int" name="Package" ></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td><input type="text" name="comapany"  ></td>
+                        <td><input type="date" name="date_drive" ></td>
+                        <td><input type="int" name="levels" ></td>
+                        <td><input type="int" name="Package" ></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td><input type="text" name="comapany"  ></td>
+                        <td><input type="date" name="date_drive" ></td>
+                        <td><input type="int" name="levels" ></td>
+                        <td><input type="int" name="Package" ></td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td><input type="text" name="comapany"  ></td>
+                        <td><input type="date" name="date_drive" ></td>
+                        <td><input type="int" name="levels" ></td>
+                        <td><input type="int" name="Package" ></td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td><input type="text" name="comapany"  ></td>
+                        <td><input type="date" name="date_drive" ></td>
+                        <td><input type="int" name="levels" ></td>
+                        <td><input type="int" name="Package" ></td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td><input type="text" name="comapany"  ></td>
+                        <td><input type="date" name="date_drive" ></td>
+                        <td><input type="int" name="levels" ></td>
+                        <td><input type="int" name="Package" ></td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td><input type="text" name="comapany"  ></td>
+                        <td><input type="date" name="date_drive" ></td>
+                        <td><input type="int" name="levels" ></td>
+                        <td><input type="int" name="Package" ></td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td><input type="text" name="comapany"  ></td>
+                        <td><input type="date" name="date_drive" ></td>
+                        <td><input type="int" name="levels" ></td>
+                        <td><input type="int" name="Package" ></td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td><input type="text" name="comapany"  ></td>
+                        <td><input type="date" name="date_drive" ></td>
+                        <td><input type="int" name="levels" ></td>
+                        <td><input type="int" name="Package" ></td>
+                    </tr>
+                   
+                    
+                    
+                </tbody>
+            </table>
+            <hr>
+
+            <div class="guidelines-container">
+                <h2 class="report-heading">Guidelines for Batch Guardian</h2>
+                <ol class="guidelines-list">
+                    <li>Faculty Batch Guardian will arrange meetings with students once in a month.</li>
+                    <li>Faculty Batch Guardian will assure that monitoring details are filled/updated by the students.</li>
+                    <li>During follow-up meetings, the Batch Guardian will get information about the students' attendance and counsel them for irregularities, if any.</li>
+                    <li>Faculty Batch Guardians have to make the performance analysis of individual students on the basis of their attendance and test marks.</li>
+                    <li>After every internal evaluation, the Batch Guardian will get information about the students' academic performance and understand reasons for poor performance, if observed.</li>
+                    <li>Batch Guardians are expected to encourage students to participate in both institute and external activities to explore their special skills and abilities.</li>
+                    <li>The record of all meetings has to be maintained by all Faculty Batch Guardians individually for every student.</li>
+                    <li>Such records will be used to share with the respective parents during parent meetings and will be produced to the management whenever required.</li>
+                </ol>
+                <div class="signature">
+                    <label for="signature-input">Batch Guardian's Signature:</label>
+                    <input type="file" id="signature-input" name="signature" placeholder="Enter signature here" required>
+                </div>
+            </div>
+            
+
+        </div>
+        <hr>
+</body>
